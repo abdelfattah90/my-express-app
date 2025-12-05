@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">الرئيسية</a>
+        <a href="/about">من نحن</a>
+      </nav>
+    </header>
+    <main>
+      <h1>مرحباً بك في موقعنا</h1>
+      <p>هذا مثال على خادم Express يقدم ملفات HTML ثابتة</p>
+      <button onclick="fetchData()">جلب البيانات من API</button>
+      <div id="result"></div>
+    </main>
+    <script>
+      async function fetchData() {
+        const response = await fetch('/api/data')
+        const data = await response.json()
+        document.getElementById('result').textContent = JSON.stringify(
+          data,
+          null,
+          2
+        )
+      }
+    </script>
+  </body>
+</html>

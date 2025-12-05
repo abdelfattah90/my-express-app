@@ -1,0 +1,23 @@
+{
+  "name": "my-express-app",
+  "version": "1.0.0",
+  "description": "Express app serving HTML files on Vercel",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js"
+  },
+  "keywords": [
+    "express",
+    "vercel",
+    "static"
+  ],
+  "author": "Ahmed",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
