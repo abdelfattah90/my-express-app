@@ -11,11 +11,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../public', 'index.html'))
 })
 
-// Route لصفحة About
-app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public', 'about.html'))
-})
-
 // API endpoint example
 app.get('/api/data', (req, res) => {
   res.json({ message: 'Hello from API', timestamp: new Date() })
